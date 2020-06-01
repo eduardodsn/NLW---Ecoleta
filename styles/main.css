@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 500ms;
 }
 
 html {
@@ -31,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100vh;
     background: url('../assets/home-background.svg') no-repeat;
     background-position: 35vw 15vh; 
+    transition: 500ms;
 }
 
 #page-home .content {
@@ -47,6 +49,17 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo h3 {
+    font-size: 35px;
+    margin-left: 20px;
 }
 
 #page-home header a {
@@ -118,6 +131,37 @@ h1, h2, h3, h4, h5, h6 {
 #page-home main a strong {
     flex: 1;
     text-align: center;
+    color: white;
+}
+
+/* SWITCHER */
+
+#switcher {
+    display: none;
+}
+
+#label-switcher i {
+    position: absolute;
+    top: 52px;
+    right: 2%;
+    font-size: 20px;
+    transition: 500ms;
+}
+
+#label-switcher i:hover {
+    cursor: pointer;
+}
+
+#switcher:checked ~ #page-home {
+    background-color: #151515;
+}
+
+#switcher:checked ~ #label-switcher i,
+#switcher:checked ~ #page-home > div > main > h1,
+#switcher:checked ~ #page-home > div > main > p,
+#switcher:checked ~ #page-home > div > header > a,
+#switcher:checked ~ #page-home > div > header > a,
+#switcher:checked ~ #page-home > div > header > div > h3 {
     color: white;
 }
 
