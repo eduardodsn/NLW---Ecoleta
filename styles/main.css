@@ -1,6 +1,7 @@
 :root {
     --title-color: #322153;
     --primary-color: #34cb79;
+    --dark-mode: #151515;
 }
 
 * {
@@ -17,6 +18,7 @@ html {
 body {
     background: #f0f0f5;
     -webkit-font-smoothing: antialiased;
+    overflow: hidden;
 }
 
 a {
@@ -31,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 #page-home {
     height: 100vh;
     background: url('../assets/home-background.svg') no-repeat;
-    background-position: 35vw 15vh; 
+    background-position: 36vw 15vh; 
     transition: 500ms;
 }
 
@@ -153,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #switcher:checked ~ #page-home {
-    background-color: #151515;
+    background-color: var(--dark-mode);
 }
 
 #switcher:checked ~ #label-switcher i,
