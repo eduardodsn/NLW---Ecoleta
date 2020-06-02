@@ -1,0 +1,15 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#page-create-point header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-create-point header a {
+    color: var(--title-color);
+}
