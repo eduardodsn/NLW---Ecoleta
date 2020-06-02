@@ -136,15 +136,3 @@ form button:hover {
 #label-switcher i:hover {
     cursor: pointer;
 }
-
-.darkness {
-    background-color: var(--dark-mode);
-}
-
-.darkness-theme {
-    color: var(--dark-mode) !important;
-}
-
-.light-theme {
-    color: white !important;
-}

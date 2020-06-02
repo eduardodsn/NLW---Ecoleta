@@ -48,7 +48,7 @@ document.querySelector("#label-switcher").addEventListener("click", changeTheme)
 function changeTheme(event) {
     const body = document.querySelector("body")
     const headerTexts = document.querySelectorAll("#logo h3, #page-create-point header a, #label-switcher i")
-    const formTexts = document.querySelectorAll("form h1, h2, h3")
+    const formTexts = document.querySelectorAll("form h1, form h2, form h3")
     
     // body
     if(body.classList.contains("darkness")) {

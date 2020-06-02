@@ -107,10 +107,6 @@
 
 /* SWITCHER */
 
-#switcher {
-    display: none;
-}
-
 #label-switcher i {
     position: absolute;
     top: 52px;
@@ -121,17 +117,4 @@
 
 #label-switcher i:hover {
     cursor: pointer;
-}
-
-#switcher:checked ~ #page-home {
-    background-color: var(--dark-mode);
-}
-
-#switcher:checked ~ #label-switcher i,
-#switcher:checked ~ #page-home > div > main > h1,
-#switcher:checked ~ #page-home > div > main > p,
-#switcher:checked ~ #page-home > div > header > a,
-#switcher:checked ~ #page-home > div > header > a,
-#switcher:checked ~ #page-home > div > header > div > h3 {
-    color: white;
 }
