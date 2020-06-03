@@ -2,6 +2,7 @@
     --title-color: #322153;
     --primary-color: #34cb79;
     --dark-mode: #151515;
+    --white-color: #f0f0f5;
 }
 
 * {
@@ -16,7 +17,7 @@ html {
 }
 
 body {
-    background: #f0f0f5;
+    background: var(--white-color);
     -webkit-font-smoothing: antialiased;
 }
 

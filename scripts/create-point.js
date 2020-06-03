@@ -15,8 +15,6 @@ function populateUFs() {
 populateUFs()
 
 
-document.querySelector("select[name=uf]").addEventListener("change", getCities)
-
 // get cities from API
 function getCities(event) {
     const citySelect = document.querySelector("[name=city]")
@@ -28,21 +26,22 @@ function getCities(event) {
     stateInput.value = event.target.options[event.target.selectedIndex].text
     
     // resetar select
-    citySelect.innerHTML = `<option value="">Seleciona a Cidade</option>`
+    citySelect.innerHTML = `<option value="">Selecione a Cidade</option>`
+    citySelect.disabled = true
 
     fetch(url)
     .then( response => response.json() )
     .then ( cities => {
         for(city of cities) {
-            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+            citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
         }
         citySelect.disabled = false
     })
 
 }
 
+document.querySelector("select[name=uf]").addEventListener("change", getCities)
 
-document.querySelector("#label-switcher").addEventListener("click", changeTheme)
 
 // change theme
 function changeTheme(event) {
@@ -74,4 +73,47 @@ function changeTheme(event) {
             formText.classList.add("darkness-theme")
         }
     })
+}
+
+document.querySelector("#label-switcher").addEventListener("click", changeTheme)
+
+
+// itens de coleta
+
+const itemsToColect = document.querySelectorAll('.items-grid li')
+
+for (const item of itemsToColect) {
+    item.addEventListener("click", handleSelectedItem)
+}
+
+const collectedItems = document.querySelector('input[name=items]')
+
+let selectedItems = []
+
+function handleSelectedItem(event) {
+    const itemLi = event.target
+    const itemId = event.target.dataset.id
+
+    itemLi.classList.toggle("selected")
+
+
+    // verificar se existem itens selecionados, se sim
+    // pegar os itens selecionados
+    const alreadySelected = selectedItems.findIndex( item => {
+        return item === itemId
+    } )
+
+    // se ja estiver selecionado
+    if(alreadySelected >= 0) {
+        // tirar da selecao
+        const filteredItems = selectedItems.filter( item => {
+            return false 
+        })
+        selectedItems = filteredItems
+    }else {
+        // se nao estiver selecionado, adicionar a seleção
+        selectedItems.push(itemId)
+    }
+    // atualizar o input escondido com os itens selecionados
+    collectedItems.value = selectedItems
 }

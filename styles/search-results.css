@@ -1,0 +1,126 @@
+body {
+    height: 100%;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 250px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: white;
+}
+
+#page-search-results {
+    width: 90%;
+    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#page-search-results header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo h3 {
+    font-size: 35px;
+    margin-left: 20px;
+}
+
+#page-search-results header a {
+    display: flex;
+    align-items: center;    
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+#page-search-results header a span {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    background-image: url("../assets/arrow-left.svg");
+}
+
+main {
+    margin: 20px 10px;
+}
+
+main h4 {
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    margin-bottom: 32px;
+}
+
+main .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+main .card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;  
+}
+
+main .card h1 {
+    font-size: 36px;
+    line-height: 41px;
+    color: var(--title-color);
+    margin-top: 32px;
+}
+
+main .card h3 {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--primary-color);
+    margin: 24px 0;
+}
+
+main .card p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #6c6c80;
+}
+
+
+
+
+
+
+
+
+
+
+/* Switcher */
+#switcher {
+    display: none;
+}
+
+#label-switcher i {
+    position: absolute;
+    top: 52px;
+    right: 2%;
+    font-size: 20px;
+    transition: 500ms;
+    color: black;
+}
+
+#label-switcher i:hover {
+    cursor: pointer;
+}
