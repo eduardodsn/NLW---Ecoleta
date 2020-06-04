@@ -1,0 +1,60 @@
+@media (max-width: 900px) {
+    #page-home {
+        background-position-x: 70vw;
+    }
+
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home header a {
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+    }
+
+    #page-home main {
+        align-items: center;
+    }
+
+    #page-home main h1 {
+        font-size: 40px;
+    }
+
+    #page-home main p {
+        font-size: 20px;
+    }
+
+    #page-home header a span {
+        width: 20px;
+        padding-right: 20px;
+    }
+
+    #page-search-results .cards {
+        grid-template-columns: 1fr;
+    }
+
+    main .card img {
+        height: 200px;
+    }
+
+    #modal .content {
+        margin: 0 10px;
+    }
+
+    form .field-group {
+        flex-direction: column;
+    }
+
+    form .field-group .field + .field {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1368px) {
+    #page-home {
+        background-position-x: 48vw;
+    }
+}
