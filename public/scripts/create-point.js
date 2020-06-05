@@ -92,7 +92,11 @@ let selectedItems = []
 
 function handleSelectedItem(event) {
     const itemLi = event.target
-    const itemId = event.target.dataset.id
+    const itemId = itemLi.dataset.id
+
+    // console.log("ITEM ID: ", itemId)
+
+
 
     itemLi.classList.toggle("selected")
 
@@ -114,6 +118,10 @@ function handleSelectedItem(event) {
         // se nao estiver selecionado, adicionar a seleção
         selectedItems.push(itemId)
     }
+
+    // console.log("ITEM ID: ", itemId)
+
+
     // atualizar o input escondido com os itens selecionados
     collectedItems.value = selectedItems
 }
