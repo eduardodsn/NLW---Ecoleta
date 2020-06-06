@@ -30,14 +30,40 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--title-color);
 }
 
-.darkness {
+/* Dark Theme */
+
+.dark-theme-black-background {
     background-color: var(--dark-mode);
 }
 
-.darkness-theme {
+.dark-theme-white {
+    color: white !important;
+}
+
+.dark-theme-black {
     color: var(--dark-mode) !important;
 }
 
-.light-theme {
-    color: white !important;
+.hide-theme-icon {
+    display: none;
+}
+
+/* Switcher */
+#label-switcher i {
+    position: absolute;
+    top: 50px;
+    right: 5%;
+    font-size: 23px;
+}
+
+#label-switcher i:hover {
+    cursor: pointer;
+}
+
+.fa-sun {
+    color: #FDB813;
+}
+
+.fa-moon {
+    color: #F5F3CE;
 }

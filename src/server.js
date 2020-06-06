@@ -95,7 +95,7 @@ server.get("/search", (req, res) => {
     const search = req.query.search
 
     if(search == "") {
-        //mostrar a pagina html com os dados do db
+        // verifica que não tem nada relacionado no db
         return res.render("search-results.html", { total: 0 })
     }
 
@@ -107,6 +107,11 @@ server.get("/search", (req, res) => {
 
         const total = rows.length
 
+        //formatar rows do db
+        rows.forEach(row => {
+            row.items = row.items.replace(",", ", ")
+        })
+        
         //mostrar a pagina html com os dados do db
         return res.render("search-results.html", { places: rows, total: total })
     })

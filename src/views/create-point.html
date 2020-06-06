@@ -12,6 +12,7 @@
 {% endblock title %}
 
 {% block content %}
+    {% include "partials/switcher.html" %}
     {% include "partials/page-header.html" %}
 
     <form action="/save-point" method="POST">

@@ -10,10 +10,11 @@ body {
 }
 
 #page-create-point header {
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin: 40px 0;
 }
 
 #logo {
@@ -47,7 +48,7 @@ form {
     background-color: white;
     padding: 64px;
     border-radius: 8px;
-    margin: 80px auto;
+    margin: 80px 0;
 }
 
 form h1 {
@@ -126,23 +127,6 @@ form button {
 
 form button:hover {
     background-color: #2fb86e;
-    cursor: pointer;
-}
-
-/* Switcher */
-#switcher {
-    display: none;
-}
-
-#label-switcher i {
-    position: absolute;
-    top: 52px;
-    right: 2%;
-    font-size: 20px;
-    transition: 500ms;
-}
-
-#label-switcher i:hover {
     cursor: pointer;
 }
 

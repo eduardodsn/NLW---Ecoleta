@@ -1,22 +1,8 @@
 {
-  "name": "NLW-Ecoleta",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/server.js",
+  "name": "ecoleta",
   "scripts": {
     "start": "nodemon src/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eduardodsn/NextLevelWeek-Starter.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/eduardodsn/NextLevelWeek-Starter.gitissues"
-  },
-  "homepage": "https://github.com/eduardodsn/NextLevelWeek-Starter#readme",
   "dependencies": {
     "express": "^4.17.1",
     "nunjucks": "^3.2.1",

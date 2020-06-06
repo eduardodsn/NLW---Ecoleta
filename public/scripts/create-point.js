@@ -42,44 +42,7 @@ function getCities(event) {
 
 document.querySelector("select[name=uf]").addEventListener("change", getCities)
 
-
-// change theme
-function changeTheme(event) {
-    const body = document.querySelector("body")
-    const headerTexts = document.querySelectorAll("#logo h3, #page-create-point header a, #label-switcher i")
-    const formTexts = document.querySelectorAll("form h1, form h2, form h3")
-    
-    // body
-    if(body.classList.contains("darkness")) {
-        body.classList.remove("darkness")
-    }else {
-        body.classList.add("darkness")
-    }
-
-    // texts
-    headerTexts.forEach(function(headerText) {
-        if(headerText.classList.contains("light-theme")){
-            headerText.classList.remove("light-theme")
-        }else{
-            headerText.classList.add("light-theme")
-        }
-    })
-
-    // texts
-    formTexts.forEach(function(formText) {
-        if(formText.classList.contains("darkness-theme")){
-            formText.classList.remove("darkness-theme")
-        }else{
-            formText.classList.add("darkness-theme")
-        }
-    })
-}
-
-document.querySelector("#label-switcher").addEventListener("click", changeTheme)
-
-
 // itens de coleta
-
 const itemsToColect = document.querySelectorAll('.items-grid li')
 
 for (const item of itemsToColect) {
@@ -87,19 +50,14 @@ for (const item of itemsToColect) {
 }
 
 const collectedItems = document.querySelector('input[name=items]')
-
 let selectedItems = []
 
+// adiciona ou remove itens clicados
 function handleSelectedItem(event) {
     const itemLi = event.target
     const itemId = itemLi.dataset.id
 
-    // console.log("ITEM ID: ", itemId)
-
-
-
     itemLi.classList.toggle("selected")
-
 
     // verificar se existem itens selecionados, se sim
     // pegar os itens selecionados
@@ -119,9 +77,35 @@ function handleSelectedItem(event) {
         selectedItems.push(itemId)
     }
 
-    // console.log("ITEM ID: ", itemId)
-
-
     // atualizar o input escondido com os itens selecionados
     collectedItems.value = selectedItems
+}
+
+// pega os icones de sol e lua e adiciona um EventListener ao label do switcher
+iconSun = document.querySelector("#label-switcher .fa-sun")
+iconMoon = document.querySelector("#label-switcher .fa-moon")
+document.querySelector("#label-switcher").addEventListener("click", changeTheme)
+
+// função para trocar de tema
+function changeTheme() {
+    const body = document.querySelector("body")
+    const textsToWhite = document.querySelectorAll("header h3, header a")
+    const textsToBlack = document.querySelectorAll("form h1, form h2, form li span")
+
+    // adiciona classe dark-theme-black-background para o body
+    body.classList.toggle("dark-theme-black-background")
+
+    // adiciona class dark-theme-white para os textos
+    textsToWhite.forEach(text => {
+        text.classList.toggle("dark-theme-white")
+    })
+
+    // adiciona class dark-theme-black para os textos
+    textsToBlack.forEach(text => {
+        text.classList.toggle("dark-theme-black")
+    })
+
+    //troca de icones do tema
+    iconSun.classList.toggle("hide-theme-icon")
+    iconMoon.classList.toggle("hide-theme-icon")
 }

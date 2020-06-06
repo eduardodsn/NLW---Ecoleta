@@ -3,16 +3,15 @@ body {
     background-color: white;
 }
 
-body::after {
-    content: '';
+.back-div {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    height: 16rem;
+    height: 220px;
     z-index: -1;
-    background-color: #f0f0f5;
+    background-color: #eee;
 }
 
 #page-search-results {
@@ -59,6 +58,11 @@ main {
     margin: 20px 10px;
 }
 
+main span {
+    color: black;
+    font-weight: 700;
+}
+
 main h4 {
     font-family: Roboto, sans-serif;
     font-weight: normal;
@@ -98,31 +102,4 @@ main .card p {
     font-size: 16px;
     line-height: 26px;
     color: #6c6c80;
-}
-
-
-
-
-
-
-
-
-
-
-/* Switcher */
-#switcher {
-    display: none;
-}
-
-#label-switcher i {
-    position: absolute;
-    top: 52px;
-    right: 2%;
-    font-size: 20px;
-    transition: 500ms;
-    color: black;
-}
-
-#label-switcher i:hover {
-    cursor: pointer;
 }

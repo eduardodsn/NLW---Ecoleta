@@ -11,19 +11,21 @@
 {% endblock title %}
 
 {% block content %}
+    {% include "partials/switcher.html" %}
     {% include "partials/page-header.html" %}
+    <div class="back-div" id="gray-back"></div>
     <main>
 
         {% if total > 0 %}
             {% if total == 1 %}
                 <h4>
-                    <strong>{{ total }} ponto</strong>
+                    <span>{{ total }} ponto</span>
                     encontrado
                 </h4>
 
             {% else %}
                 <h4>
-                    <strong>{{ total }} pontos</strong>
+                    <span>{{ total }} pontos</span>
                     encontrados
                 </h4>
             {% endif %}
@@ -51,9 +53,13 @@
 
         {% else %}
 
-        <h4><strong>Nenhum</strong> ponto de coleta encontrado</h4>
+        <h4><span>Nenhum</span> ponto de coleta encontrado</h4>
 
         {% endif %}
 
     </main>
 {% endblock content %}
+
+{% block scripts %}
+    <script src="./scripts/search-results.js"></script>
+{% endblock scripts %}
