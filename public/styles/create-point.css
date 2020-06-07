@@ -10,7 +10,7 @@ body {
 }
 
 #page-create-point header {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +48,7 @@ form {
     background-color: white;
     padding: 64px;
     border-radius: 8px;
-    margin: 80px 0;
+    margin: 80px auto;
 }
 
 form h1 {

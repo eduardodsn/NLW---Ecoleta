@@ -28,19 +28,14 @@ server.get("/", (req, res) => {
     return res.render("index.html")
 })
 
-
-
-
-
-
-
+// rota
 server.get("/create-point", (req, res) => {
     //req.query: Query strings da url
     // console.log(req.query)
-
     return res.render("create-point.html")
 })
 
+//salvar dados do form
 server.post("/save-point", (req, res) => {
     //req.body: corpo do formulario
     
@@ -69,28 +64,15 @@ server.post("/save-point", (req, res) => {
 
     function afterInsertData(err) {
         if(err) {
-            return console.log(err)
-            //fazer tela de erro
+            return res.render("create-point.html", { saved: false })
         }
-
         return res.render("create-point.html", { saved: true })
     }
 
     db.run(query, values, afterInsertData)
-
-    
 })
 
-
-
-
-
-
-
-
-
-
-
+// puxar os dados do db
 server.get("/search", (req, res) => {
     const search = req.query.search
 
@@ -109,7 +91,7 @@ server.get("/search", (req, res) => {
 
         //formatar rows do db
         rows.forEach(row => {
-            row.items = row.items.replace(",", ", ")
+            row.items = row.items.split(",").join(", ")
         })
         
         //mostrar a pagina html com os dados do db
@@ -119,4 +101,3 @@ server.get("/search", (req, res) => {
 
 //ligar o servidor 
 server.listen(3000)
-

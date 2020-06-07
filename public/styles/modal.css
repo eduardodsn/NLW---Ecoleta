@@ -79,6 +79,7 @@
 
 #modal.point .content {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
@@ -86,4 +87,5 @@
 #modal.point h1 {
     color: white;
     margin-top: 32px;
+    text-align: center;
 }

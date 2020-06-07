@@ -5,11 +5,11 @@ body {
 
 .back-div {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -50px;
+    left: -18px;
     bottom: 0;
-    right: 0;
-    height: 220px;
+    right: -18px;
+    height: 285px;
     z-index: -1;
     background-color: #eee;
 }
@@ -22,6 +22,7 @@ body {
 }
 
 #page-search-results header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +56,8 @@ body {
 }
 
 main {
-    margin: 20px 10px;
+    margin: 20px 10px 87px;
+    padding: 20px 0;
 }
 
 main span {

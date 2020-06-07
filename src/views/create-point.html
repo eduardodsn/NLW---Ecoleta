@@ -113,10 +113,11 @@
 
 {% block modal %}
     {% if saved %}
-        {% include "partials/point-created.html" %}}
+        {% include "partials/point-created.html" %}
+    {% elif saved == false %}
+        {% include "partials/error-create-point.html" %}
     {% endif %}
 {% endblock modal %}
-
 
 
 {% block scripts %}

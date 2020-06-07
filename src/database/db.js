@@ -21,7 +21,7 @@ db.serialize(() => {
     //     );
     // `)
 
-    // //inserir dados na tabela
+    // // //inserir dados na tabela
     // const query = `
     //     INSERT INTO places (
     //         image,
@@ -55,7 +55,7 @@ db.serialize(() => {
 
     // db.run(query, values, afterInsertData)
 
-    //consultar os dados da tabela
+    // consultar os dados da tabela
     // db.all(`SELECT name FROM places`, function(err, rows) {
     //     if(err) {
     //         return console.log(err)
