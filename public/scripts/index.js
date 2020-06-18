@@ -3,6 +3,23 @@ iconSun = document.querySelector("#label-switcher .fa-sun")
 iconMoon = document.querySelector("#label-switcher .fa-moon")
 document.querySelector("#label-switcher").addEventListener("click", changeTheme)
 
+
+// verifica tema atual
+var theme = localStorage.getItem("theme") || 'light';
+
+if(theme === 'dark') {
+    changeTheme()
+}
+
+iconSun.addEventListener('click', setThemeLocalStorage)
+iconMoon.addEventListener('click', setThemeLocalStorage)
+
+function setThemeLocalStorage() {
+    theme = theme === 'dark' ? 'light' : 'dark'
+    localStorage.setItem("theme", theme)
+}
+
+
 // função para trocar de tema
 function changeTheme() {
     const body = document.querySelector("body")
