@@ -3,7 +3,7 @@
 </p>
 
 # :bulb: &emsp;Sobre o projeto
-O objetivo dessa semana era construir uma aplicação que permitisse que usuários cadastrassem pontos de coleta de resíduos, dos mais diversos, através de um formulário. Além disso, os usuários poderiam consultar pontos de coleta por cidade. Tudo isso utilizando as melhores tecnologias, para avançar para o próximo nível. Clique [aqui](https://ecoletadf.herokuapp.com/) para ver o projeto. :rocket:
+O objetivo dessa semana era construir uma aplicação que permitisse que usuários cadastrassem pontos de coleta de resíduos, dos mais diversos, através de um formulário. Além disso, os usuários poderiam consultar pontos de coleta por cidade. Clique [aqui](https://ecoletadf.herokuapp.com/) para ver o projeto. :rocket:
 
 
 # :clipboard: &emsp;Tecnologias utilizadas
