@@ -15,7 +15,7 @@ O objetivo dessa semana era construir uma aplicação que permitisse que usuári
 - Express
 - Nodemon
 - SQLite
-- Nunjuncks
+- Nunjucks
 
 <p>
   <h4 align="center">Projeto realizado durante o evento Next Level Week da Rocketseat</h4>
